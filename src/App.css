@@ -1,38 +1,84 @@
-.App {
+/* Global styles for the entire app */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for the container that holds header, sidebar, and main content */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* the container takes up the full viewport height */
+}
+
+/* Styles for the sidebar */
+
+.sidebar {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Styles for the header */
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-buttons button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Styles for the footer */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Styles for the main content */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-content {
+  flex: 1; /* Allow the main content to take up the remaining space */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* Styles for the map container */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map {
+  flex: 1; /* Allow the map to take up the remaining space */
 }
